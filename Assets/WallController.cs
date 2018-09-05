@@ -6,6 +6,7 @@ public class WallController : MonoBehaviour {
 
     const float speed = -10;
 
+
     void Start () {
 		
 	}
@@ -16,7 +17,7 @@ public class WallController : MonoBehaviour {
 
         if (transform.position.z < -20)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
 
     }

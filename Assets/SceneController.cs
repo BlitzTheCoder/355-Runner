@@ -25,14 +25,20 @@ public class SceneController : MonoBehaviour {
             Instantiate(prefabObstacle, pos, Quaternion.identity);
             delayUntilSpawn = Random.Range(1, 3);
         }
-
         for (int i = prefabWalls.Count; i < 10; i++)
         {
-            float nextWallZ = prefabWalls[i].transform.position.z * 7.5f;
-            Vector3 pos = new Vector3(-7, 0, nextWallZ + 20);
             prefabWalls.Add(prefabWall);
+            float nextWallZ = i * 15f;
+            Vector3 pos = new Vector3(-7, 0, (nextWallZ + 20));
             Instantiate(prefabWalls[i], pos, Quaternion.identity);
-            wallTimer = 1;
+        }
+        for (int i = prefabWalls.Count -1; i>0; i--)
+        {
+            if (prefabWalls[i].transform.position.z < -20)
+            {
+                prefabWalls[i].gameObject.Destroy(gameObject);
+                prefabWalls.RemoveAt(i);
+            }
         }
     }
 }
