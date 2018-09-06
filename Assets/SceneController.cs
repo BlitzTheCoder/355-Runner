@@ -6,23 +6,25 @@ public class SceneController : MonoBehaviour {
 
     public GameObject prefabObstacle;
     public GameObject prefabWall;
-    private List<GameObject> prefabWalls = new List<GameObject>();
+    private List<GameObject> walls = new List<GameObject>();
     float delayUntilSpawn = 0;
     
 
 	void Start () {
-        for (int i = prefabWalls.Count; i <= 9; i++)
+        for (int i = walls.Count; i <= 9; i++)
         {
-            prefabWalls.Add(prefabWall);
+            //walls.Add(prefabWall);
             float nextWallZ = i * 15f;
             Vector3 pos = new Vector3(-7, 0, (nextWallZ + 20));
-            Instantiate(prefabWalls[i], pos, Quaternion.identity);
+            GameObject wall = Instantiate(walls[i], pos, Quaternion.identity);
+            walls.Add(wall);
+
         }
     }
 	
 	// Update is called once per frame
 	void Update () {
-        print(prefabWalls.Count);
+        print(walls.Count);
         delayUntilSpawn -= Time.deltaTime;
         if (delayUntilSpawn <= 0)
         {
@@ -31,11 +33,11 @@ public class SceneController : MonoBehaviour {
             delayUntilSpawn = Random.Range(1, 3);
         }
         
-        for (int i = prefabWalls.Count -1; i>=0; i--)
+        for (int i = walls.Count -1; i>=0; i--)
         {
-            if (prefabWalls[i].gameObject == null)
+            if (walls[i].gameObject == null)
             {
-                prefabWalls.RemoveAt(i);
+                walls.RemoveAt(i);
 
                 //prefabWalls[i].transform.position = new Vector3(-7, 0, (i*15) + 20);
             }
