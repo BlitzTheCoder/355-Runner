@@ -4,51 +4,44 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour {
 
-    public GameObject prefabObstacle;
-    public GameObject prefabWall;
-    private List<GameObject> walls = new List<GameObject>();
-    float delayUntilSpawn = 0;
-    
+    public Track prefabTrack;
+
+    List<Track> tracks = new List<Track>();
 
 	void Start () {
-        for (int i = walls.Count; i <= 9; i++)
-        {
-            //walls.Add(prefabWall);
-            float nextWallZ = i * 15f;
-            Vector3 pos = new Vector3(-7, 0, (nextWallZ + 20));
-            GameObject wall = Instantiate(walls[i], pos, Quaternion.identity);
-            walls.Add(wall);
-
-        }
+        SpawnSomeTrack();
     }
 	
 	// Update is called once per frame
 	void Update () {
-        print(walls.Count);
-        delayUntilSpawn -= Time.deltaTime;
-        if (delayUntilSpawn <= 0)
-        {
-            Vector3 pos = new Vector3(0, 0, 20);
-            Instantiate(prefabObstacle, pos, Quaternion.identity);
-            delayUntilSpawn = Random.Range(1, 3);
-        }
         
-        for (int i = walls.Count -1; i>=0; i--)
+        for (int i = tracks.Count - 1; i >= 0; i--)
         {
-            if (walls[i].gameObject == null)
+            if (tracks[i].isDead)
             {
-                walls.RemoveAt(i);
 
-                //prefabWalls[i].transform.position = new Vector3(-7, 0, (i*15) + 20);
+                Destroy(tracks[i].gameObject);
+                tracks.RemoveAt(i);
             }
         }
-        /*if(prefabWalls.Count <= 9)
-        {
-            prefabWalls.Add(prefabWall);
-            //float nextWallZ = 9 * 15f;
-            Vector3 pos = new Vector3(-7, 0, 170);
-            Instantiate(prefabWalls[9], pos, Quaternion.identity);
 
-        }*/
+        if (tracks.Count < 5) SpawnSomeTrack();
+
+    }
+    void SpawnSomeTrack()
+    {
+        while (tracks.Count < 5)
+        {
+            Vector3 ptOut = Vector3.zero;
+
+            if (tracks.Count > 0) ptOut = tracks[tracks.Count - 1].pointOut.position;
+
+            Vector3 ptIn = prefabTrack.pointIn.position;
+
+            Vector3 pos = (prefabTrack.transform.position - ptIn) + ptOut;
+
+            Track newTrack = Instantiate(prefabTrack, pos, Quaternion.identity);
+            tracks.Add(newTrack);
+        }
     }
 }
