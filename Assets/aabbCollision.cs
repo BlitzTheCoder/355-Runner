@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Apply this script to all objects that require collision checking
 public class aabbCollision : MonoBehaviour {
 
     public Vector3 halfSize;

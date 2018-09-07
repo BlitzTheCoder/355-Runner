@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Attach this script to the Player Character
 public class PlayerMovement : MonoBehaviour {
 
-    public float laneWidth = 2;
+    float laneWidth = 3;
     int lane = 0;
 
 	void Start () {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetButtonDown("Horizontal"))
         {
 
-            print("I'm down");
+            //print("I'm down");
             if (h == -1) // if pressing left
             {
                 lane--;

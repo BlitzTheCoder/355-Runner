@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+// Apply This Script to the Main Camera
 public class CollisionController : MonoBehaviour {
 
     static private List<aabbCollision> aabbs = new List<aabbCollision>();

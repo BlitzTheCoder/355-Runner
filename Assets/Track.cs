@@ -22,12 +22,13 @@ public class Track : MonoBehaviour {
         if (wallSpawnPoints.Length == 0) return;
         if (!prefabWall) return;
 
-        //Get a Random Position:
-        int randIndex = Random.Range(0, wallSpawnPoints.Length);
-        Vector3 spawnPos = wallSpawnPoints[randIndex].position;
+        for (int i = wallSpawnPoints.Length - 1; i >= 0; i--)
+        {
+            Vector3 spawnPos = wallSpawnPoints[i].position;
 
-        //Spawn a wall, parent it to this chuck of track
-        Instantiate(prefabWall, spawnPos, Quaternion.identity, transform);
+            //Spawn a wall, parent it to this chuck of track
+            Instantiate(prefabWall, spawnPos, Quaternion.identity, transform);
+        }
     }
 
     void Update()
