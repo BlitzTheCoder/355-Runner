@@ -11,7 +11,7 @@ public class Track : MonoBehaviour {
 
     public GameObject prefabWall;
 
-    public const float speed = 10;
+    public const float speed = 20;
 
     [HideInInspector]
     public bool isDead = false;

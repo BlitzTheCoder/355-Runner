@@ -82,7 +82,7 @@ Transform:
   m_GameObject: {fileID: 1531284717321210}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.56, z: 0}
-  m_LocalScale: {x: 10.572, y: 0.10319, z: 23.430761}
+  m_LocalScale: {x: 10, y: 0.1, z: 25}
   m_Children: []
   m_Father: {fileID: 4996140482670186}
   m_RootOrder: 1
@@ -94,7 +94,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867611625947604}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5500002, z: 11.71}
+  m_LocalPosition: {x: 0, y: 0, z: 12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4996140482670186}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1930898073860974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: -11.71}
+  m_LocalPosition: {x: 0, y: 0, z: -12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4996140482670186}
@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1847942818149512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.942093, y: 16.422634, z: 26.147635}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4538288915486908}
@@ -184,3 +184,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointIn: {fileID: 4538288915486908}
   pointOut: {fileID: 4486589490688992}
+  wallSpawnPoints: []
+  prefabWall: {fileID: 0}
+  isDead: 0

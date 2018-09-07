@@ -19,13 +19,12 @@ public class SceneController : MonoBehaviour {
         {
             if (tracks[i].isDead)
             {
-
                 Destroy(tracks[i].gameObject);
                 tracks.RemoveAt(i);
             }
         }
 
-        if (tracks.Count < 5) SpawnSomeTrack();
+        
 
     }
     void SpawnSomeTrack()
@@ -43,5 +42,10 @@ public class SceneController : MonoBehaviour {
             Track newTrack = Instantiate(prefabTrack, pos, Quaternion.identity);
             tracks.Add(newTrack);
         }
+    }
+    void LateUpdate()
+    {
+        if (tracks.Count < 5) SpawnSomeTrack(); //Called as a Late Update to avoid creating gaps between tracks
+
     }
 }
