@@ -6,13 +6,14 @@ public class SceneController : MonoBehaviour {
 
     public Track prefabTrack;
 
+    public float trackLength = 5;
+
     List<Track> tracks = new List<Track>();
 
 	void Start () {
         SpawnSomeTrack();
     }
 	
-	// Update is called once per frame
 	void Update () {
         
         for (int i = tracks.Count - 1; i >= 0; i--)
@@ -29,7 +30,7 @@ public class SceneController : MonoBehaviour {
     }
     void SpawnSomeTrack()
     {
-        while (tracks.Count < 5)
+        while (tracks.Count < trackLength)
         {
             Vector3 ptOut = Vector3.zero;
 
@@ -45,7 +46,7 @@ public class SceneController : MonoBehaviour {
     }
     void LateUpdate()
     {
-        if (tracks.Count < 5) SpawnSomeTrack(); //Called as a Late Update to avoid creating gaps between tracks
+        if (tracks.Count < trackLength) SpawnSomeTrack(); //Called as a Late Update to avoid creating gaps between tracks
 
     }
 }

@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour {
         float h = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Horizontal"))
         {
+
+            print("I'm down");
             if (h == -1) // if pressing left
             {
                 lane--;
