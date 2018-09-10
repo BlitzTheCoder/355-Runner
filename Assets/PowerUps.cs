@@ -13,8 +13,32 @@ public class PowerUps : MonoBehaviour {
 
     public Type type;
 
+    
+
     float speed = 5;
     float rotSpeed = 100;
+
+    void Start()
+    {
+        float rand = Random.Range(0, 3);
+
+        if (rand == 0)
+        {
+            type = Type.Slowmo;
+        }
+        else if (rand == 1)
+        {
+            type = Type.Health;
+        }
+        else
+        {
+            type = Type.JetpackBoost;
+        }
+
+        print(rand);
+        print("I am a " + type);
+
+    }
 
     void Update()
     {

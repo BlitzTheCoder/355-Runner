@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 650290617bd40ce4288e0e682c0e7b37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  floor: {fileID: 1531284717321210, guid: 8de1363fdf23c8f47a52d8660af8d134, type: 2}
 --- !u!23 &691232453
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -379,47 +380,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6dd4f84be39f854280f9114fcd5d2a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  halfSize: {x: 0.5, y: 0.5, z: 5}
+  halfSize: {x: 1, y: 1, z: 1}
   isDoneChecking: 0
---- !u!1001 &1572756217
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -0.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 2.159
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0.26952836
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.9629925
-      objectReference: {fileID: 0}
-    - target: {fileID: 4006572224748974, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
-  m_IsPrefabAsset: 0

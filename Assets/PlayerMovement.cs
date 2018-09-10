@@ -5,14 +5,16 @@ using UnityEngine;
 //Attach this script to the Player Character
 public class PlayerMovement : MonoBehaviour {
 
+    public GameObject floor;
+
     float laneWidth = 3;
     int lane = 0;
 
 	void Start () {
-		
+        laneWidth = floor.transform.localScale.x/4;
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
         float h = Input.GetAxisRaw("Horizontal");
         if (Input.GetButtonDown("Horizontal"))

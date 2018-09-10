@@ -39,7 +39,7 @@ GameObject:
   m_Layer: 0
   m_Name: wallSpawnR
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54,7 +54,7 @@ GameObject:
   m_Layer: 0
   m_Name: wallSpawnL
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -85,7 +85,7 @@ GameObject:
   m_Layer: 0
   m_Name: Point Out
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -100,7 +100,7 @@ GameObject:
   m_Layer: 0
   m_Name: Point In
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -242,8 +242,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointIn: {fileID: 4538288915486908}
   pointOut: {fileID: 4486589490688992}
+  floor: {fileID: 4351291728214452}
   wallSpawnPoints:
   - {fileID: 4949812837559910}
   - {fileID: 4418080000248160}
-  prefabWall: {fileID: 1521560837725024, guid: a1e5a837af947e444a5e867f4267eda1, type: 2}
+  wall: {fileID: 1521560837725024, guid: a1e5a837af947e444a5e867f4267eda1, type: 2}
+  powerUp: {fileID: 1998801920003624, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
   isDead: 0
