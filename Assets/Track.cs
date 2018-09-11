@@ -14,6 +14,7 @@ public class Track : MonoBehaviour
     public GameObject wall;
     public GameObject powerUp;
 
+    public static float speedMultiplier = 1;
     public const float speed = 20;
 
     [HideInInspector]
@@ -39,7 +40,7 @@ public class Track : MonoBehaviour
 
     void Update()
     {
-        transform.position += new Vector3(0, 0, -speed) * Time.deltaTime;
+        transform.position += new Vector3(0, 0, -(speed*speedMultiplier)) * Time.deltaTime;
 
         if (pointOut.position.z < -5)
         {

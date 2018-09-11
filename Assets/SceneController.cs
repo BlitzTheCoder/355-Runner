@@ -2,20 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneController : MonoBehaviour {
+public class SceneController : MonoBehaviour
+{
 
     public Track prefabTrack;
 
     public float trackLength = 5;
 
+    float elapsedTime = 0;
+
+    public float targetTime = 10;
+
+
     List<Track> tracks = new List<Track>();
 
-	void Start () {
+    void Start()
+    {
         SpawnSomeTrack();
     }
-	
-	void Update () {
-        
+
+    void Update()
+    {
+
         for (int i = tracks.Count - 1; i >= 0; i--)
         {
             if (tracks[i].isDead)
@@ -25,7 +33,18 @@ public class SceneController : MonoBehaviour {
             }
         }
 
-        
+        elapsedTime += Time.deltaTime;
+
+        if (elapsedTime >= targetTime && Track.speedMultiplier != 4)
+        {
+            Speedup();
+            print("Speed Up!");
+        } else if(Track.speedMultiplier == 4)
+        {
+            print("Speed at Max!");
+        }
+
+        //print(elapsedTime);
 
     }
     void SpawnSomeTrack()
@@ -41,8 +60,16 @@ public class SceneController : MonoBehaviour {
             Vector3 pos = (prefabTrack.transform.position - ptIn) + ptOut;
 
             Track newTrack = Instantiate(prefabTrack, pos, Quaternion.identity);
+
             tracks.Add(newTrack);
         }
+    }
+    void Speedup()
+    {
+
+        Track.speedMultiplier += 1;
+
+        elapsedTime = 0;
     }
     void LateUpdate()
     {

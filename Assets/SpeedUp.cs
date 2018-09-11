@@ -6,6 +6,7 @@ public class SpeedUp : MonoBehaviour {
 
     public float speedMultiplyer = 1;
 	
+    public 
 	void Start () {
 		
 	}

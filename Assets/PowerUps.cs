@@ -35,8 +35,8 @@ public class PowerUps : MonoBehaviour {
             type = Type.JetpackBoost;
         }
 
-        print(rand);
-        print("I am a " + type);
+        //print(rand);
+        //print("I am a " + type);
 
     }
 
