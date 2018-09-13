@@ -12,7 +12,8 @@ public class SceneController : MonoBehaviour
     float elapsedTime = 0;
 
     public float targetTime = 10;
-
+    
+    public int score = 0;
 
     List<Track> tracks = new List<Track>();
 
