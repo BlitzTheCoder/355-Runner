@@ -248,4 +248,13 @@ MonoBehaviour:
   - {fileID: 4418080000248160}
   wall: {fileID: 1521560837725024, guid: a1e5a837af947e444a5e867f4267eda1, type: 2}
   powerUp: {fileID: 1998801920003624, guid: b22de1427638d4e4f96def748bfd34af, type: 2}
+  obstacles:
+  - {fileID: 1482400984980866, guid: b2716fde88debf040ab91bed53b73a73, type: 2}
+  - {fileID: 1177836946857676, guid: a1a6ba410ff89204e858d683978e7537, type: 2}
+  - {fileID: 1183143042714506, guid: fdd89d860f849ce4d977a8e41853da16, type: 2}
+  - {fileID: 1740261951616578, guid: cf26bca265475334eba36d50e0783615, type: 2}
+  - {fileID: 1473792027246774, guid: c51549eb7447332408d1dc63772a6c59, type: 2}
+  - {fileID: 1822080014709656, guid: ed8fa74a704215e438ac91dfad74f856, type: 2}
+  - {fileID: 1446849005244444, guid: ef2badd2b5cf4eb49b3246b4f1d96adc, type: 2}
+  - {fileID: 1387074977160698, guid: 1b73b119d8fafe74296d032cd9332602, type: 2}
   isDead: 0

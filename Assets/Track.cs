@@ -13,6 +13,7 @@ public class Track : MonoBehaviour
 
     public GameObject wall;
     public GameObject powerUp;
+    public GameObject[] obstacles;
 
     public static float speedMultiplier = 1;
     public const float speed = 20;
@@ -36,6 +37,8 @@ public class Track : MonoBehaviour
 
         float rand = Random.Range(0, 5);
         if(rand == 3) SpawnPowerUp(); //each chunk of track has a 20% chance of spawning a powerup
+                                      //if (rand == 1 || rand == 2 || rand == 4) 
+        SpawnObstacle();
     }
 
     void Update()
@@ -57,6 +60,15 @@ public class Track : MonoBehaviour
         float xPos = (floor.transform.localScale.x / 4) * rand;
         Vector3 position = new Vector3(xPos, 0, 0) + transform.position;
         Instantiate(powerUp, position, Quaternion.identity, transform);
+
+    }
+    void SpawnObstacle()
+    {
+        float randLane = Random.Range(-1, 2);
+        int randObs = Random.Range(0, 9);
+        float xPos = (floor.transform.localScale.x / 4) * randLane;
+        Vector3 position = new Vector3(xPos, 0, 0) + transform.position;
+        Instantiate(obstacles[randObs], position, Quaternion.identity, transform);
 
     }
 }
