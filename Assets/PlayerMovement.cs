@@ -53,7 +53,7 @@ public class PlayerMovement : MonoBehaviour {
                 velocityX *= h;
                 transform.position += new Vector3(velocityX, 0, 0);
             }
-            //transform.position += new Vector3(x, 0, 0);
+            transform.position += new Vector3(x, 0, 0);
 
         } else if (phase >= 3)
         {
