@@ -7,6 +7,8 @@ public class SceneController : MonoBehaviour
 
     public Track prefabTrack;
 
+    public PlayerMovement player;
+
     public float trackLength = 5;
 
     float elapsedTime = 0;
@@ -40,7 +42,7 @@ public class SceneController : MonoBehaviour
         {
             Speedup();
             print("Speed Up!");
-        } else if(Track.speedMultiplier == 4)
+        } else if(Track.speedMultiplier >= 4)
         {
             print("Speed at Max!");
         }
@@ -69,6 +71,7 @@ public class SceneController : MonoBehaviour
     {
 
         Track.speedMultiplier += 1;
+        player.phase++;
 
         elapsedTime = 0;
     }
